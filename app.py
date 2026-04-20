@@ -8,9 +8,11 @@ from services.boletin_services import create_boletin
 
 app = FastAPI()
 
+
 @app.get("/")
 def read_root():
     return {"message": "¡Hola desde el contenedor de FastAPI!"}
+
 
 @app.post("/boletines")
 async def create_boletin_endpoint(

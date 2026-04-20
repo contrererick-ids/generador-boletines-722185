@@ -7,11 +7,13 @@ global boletin_counter
 boletin_counter = 0
 
 # Definición de las funciones que manejan los boletines
+
 def create_boletin_id():
     global boletin_counter
     boletin_id = str(str(uuid.uuid4()) + '-' + str(boletin_counter))
     boletin_counter += 1
     return boletin_id
+
 
 def create_boletin(boletin_file: bytes, boletin_message: str, email: str):
     try:
